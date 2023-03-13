@@ -5,14 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outllet PH</title>
-     <link rel="stylesheet" href="Css/estilo.css">
+    <link rel="stylesheet" href="Css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+		.whatsapp-link {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 40px;
+			right: 40px;
+			background-color: #25d366;
+			color: #fff;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 1px 1px 2px #888;
+			z-index: 1000;
+		}
+    </style>    
 </head>
 <body>
     <header class="header">
-        <img src="https://drjfg1pv75pds.cloudfront.net/covers/76a88e7d-3513-4f91-be9f-cb1219384b37.jpeg" alt="Deu ruim">
+        <div class="social">
+            <ol>
+                <li class="insta"><a href="https://www.instagram.com/outllet_ph/" target="_blank"><img src="image/instagram.png" alt="Instagram" ></a></li>
+                <li><img src="image/header.jpeg" alt="Logo"></li>
+                <li><a href="#"><img src="image/carrinho-de-compras.png" alt="carrinho de compras" class="carrinho"></a></li>
+            </ol>
+        </div>
     </header>
 
-    <select name="Ordenar por" id="">
+
+    <select name="Ordenar por" class="select">
         <option value="">Menor preço</option>
         <option value="">Maior preço</option>
         <option value="">Ordem alfabética</option>
@@ -24,35 +48,42 @@
 
     <section class="grid1">
         
-        
-        <div>
+        <div class="prod_border">
             <img src="https://drjfg1pv75pds.cloudfront.net/products2/d0cc83d3-7617-4dee-aa09-51d8f5e1e6f8.jpeg" alt="MIZUNO PRO 3" class="produtos">
-            <p>R$:340,00</p>
-            <p>MIZUNO PRO 3</p>
+            <p class="text">MIZUNO PRO 3</p>
+            <p class="text">R$: 340,00</p>
+            <a href="#"><button type="submit">COMPRAR</button></a>
         </div>
 
-        <div>
+        <div class="prod_border">
             <img src="https://drjfg1pv75pds.cloudfront.net/products2/91cfc45a-8018-4330-999a-12826d5afbbe.jpeg" alt="MIZUNOS PRO 6">
-            <p>de R$ 380,00</p>
-            <p>por R$ 300,00</p>
-            <p>MIZUNOS PRO 6,7,8,9,X,11</p>
+            <p class="text">MIZUNOS PRO 6,7,8,9,X,11</p>
+            <p class="text">por R$ 300,00</p>
+            <a href="#"><button type="submit">COMPRAR</button></a>
         </div>
 
-        <div>
+        <div class="prod_border">
             <img src="https://drjfg1pv75pds.cloudfront.net/products2/88db2e9b-e22d-4dfd-b153-da9b05bf1e6f.jpeg" alt="NIKE DUNK">
-            <p>de R$ 180,00</p>
-            <p>por R$ 150,00</p>
-            <p>NIKE DUNK ✅</p>
+            <p class="text">NIKE DUNK</p>
+            <p class="text">por R$ 150,00</p>
+            <a href="#"><button type="submit">COMPRAR</button></a>
+        </div class="prod_border">
+
+        <div class="prod_border">
+            <img src="https://drjfg1pv75pds.cloudfront.net/products2/85e8536f-6727-4f79-9b1d-5762e4e78bab.jpeg" alt="">
+            <p class="text">NIKE TN 3</p>
+            <p class="text">R$ 300,00</p>
+            <a href="#"><button type="submit">COMPRAR</button></a>
         </div>
 
-        <div>
+        <div class="prod_border">
             <img src="https://drjfg1pv75pds.cloudfront.net/products2/85e8536f-6727-4f79-9b1d-5762e4e78bab.jpeg" alt="">
-            <p>R$ 300,00</p>
-            <p>NIKE TN 3</p>
+            <p class="text">NIKE TN 3</p>
+            <p class="text">R$ 300,00</p>
+            <a href="#"><button type="submit">COMPRAR</button></a>
         </div>
     </section>
-
-
+	<script type="text/javascript">(function(n,r,l,d){try{var h=r.head||r.getElementsByTagName("head")[0],s=r.createElement("script");s.defer=true;s.setAttribute("type","text/javascript");s.setAttribute("src",l);n.neuroleadId=d;h.appendChild(s);}catch(e){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js", "IBuOiWLXAZUza6zSrjbA5Fi1Z");</script>
 
     <footer></footer>
 </body>
