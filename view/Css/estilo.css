@@ -21,42 +21,53 @@ header{
     flex-wrap: wrap;
     }
    
- .grid1{
-    display: grid;
-    grid-template-columns:repeat(3, 1fr) ;
-    max-width:800px ;
-    margin: 0 auto;
-    grid-gap: 20px;
- }
- .grid1 > div:nth-child(){
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  align-items: center;
- }
- .grid1 >div.anuncio{
-    grid-column: 1;
-    grid-row: 2/5;
-    border-top: 10px solid tomato;
-    display: block;
- }
+ 
 
- @media(max-width: 600px){
     .grid1{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .grid1 > div:nth-child(n + 4){
+        display: grid;
+        grid-template-columns:repeat(3, 1fr) ;
+        max-width:800px ;
+        margin: 0 auto;
+        grid-gap: 40px;
+        margin-top: 80px;
+        align-items: center;
+        
+        flex-wrap: wrap;
+     }
+     .grid1 > div:nth-child(){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      align-items: center;
+     }
+     .grid1 >div.anuncio{
+        grid-column: 1;
+        grid-row: 2/5;
+        border-top: 10px solid tomato;
         display: block;
+     }
+    
+     @media(max-width: 600px){
+        .grid1{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .grid1 > div:nth-child(){
+            display: block;
+        }
+        .grid1 > div.anuncio{
+            grid-column: auto;
+            grid-row: auto;
+            order: -1;
+        }
     }
-    .grid1 > div.anuncio{
-        grid-column: auto;
-        grid-row: auto;
-        order: -1;
-    }
-}
+
+
+
 .h1{
     text-align: center;
-    margin-top: 100px;
+     padding: 20px;
+    background-color: antiquewhite;
+    
 }
 
 .prod_border{
@@ -70,7 +81,7 @@ header{
     border-radius: 2px solid black;
     display: flex;
     justify-content: center;
-    align-itens: center;
+    align-items: center;
 }
 
 button{
@@ -80,11 +91,16 @@ button{
     white-space: nowrap;
     color: white;
     width: 300px;
+    cursor: pointer;
     height: 50px;
+}
+button:hover{
+    background-color: white;
+    color: black;
 }
 
 .text{
-    font-weight: bold;
+    font-weight: 200;
 }
 
 p{
@@ -98,8 +114,10 @@ li{
 }
 
 .insta{
-    width: 30px;
+    width: 80px;
     height: 30px;
+    
+  
 }
 
 .carrinho{
@@ -107,4 +125,11 @@ li{
     width: 50px;
     height: 50px;
     border-radius: 5px;
+   
 }
+.social{
+    text-align: center;
+    
+}
+
+ 
