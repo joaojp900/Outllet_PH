@@ -9,24 +9,51 @@ body{
 
 header ol li{
     list-style: none;
-    display: inline-block;
 }
 
 header{
     background-color: black;
+    padding: 0px;
+    margin-top: -30px;
 }
 
 .logo{
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
+    border-top: 1px solid #303030;
 }
 
 .icon_carrinho{
     background-color: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
 }
 
-header ol li h2{
+header h2{
     color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+header ol li a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.carrinho{
+    background-color: antiquewhite;
+    padding: 50px;
+}
+
+.carrinho h2{
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 2px grey;
 }

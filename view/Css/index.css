@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    margin: 0px;
     list-style: none;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,15 +15,38 @@ img{
 
 header{
     background-color: black;
+    margin-top: -20px;
+    margin-bottom: -20px;
 }
 
+
+/*Estilo da logo*/
 .logo{
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-top: 1px solid #303030;
 }
 
 
+/*Coloca cor no texto no cabeçalho*/
 header h2{
     color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+/*Alinha o icone carrinho lado superior direito*/
+header ol li a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    list-style: none;
 }
 
  
@@ -72,6 +96,10 @@ header h2{
     background-color: antiquewhite;
 }
 
+.h1 h1{
+    text-shadow: 2px 2px 2px gray;
+}
+
 .prod_border{
     border: 1px solid #CCC;
     border-radius: 5px;
@@ -95,30 +123,24 @@ button{
     width: 300px;
     cursor: pointer;
     height: 50px;
+    text-shadow: 2px 2px 2px gray;
 }
 button:hover{
     background-color: white;
     color: black;
+    text-shadow: 2px 2px 2px black;
 }
 
 .text{
     font-weight: 200;
+    text-shadow: 2px 2px 2px black;
 }
 
 p{
     color: white;
 }
 
-li{
-    display: inline-block;
-    list-style: none;
-}
-
-.insta{
-    width: 80px;
-    height: 30px;
-}
-
+/*Alinha e seta tamanho nos icones flutuantes*/
 .whatsapp{
     text-align: right;
     float: right;
@@ -127,8 +149,11 @@ li{
 	bottom: 40px;
 	right: 40px;
     position: fixed;
+    margin-bottom: 25px;
 }
 
+
+/*Espaçamento e borda nos icones flutuantes*/
 .whatsapp img{
     border-radius: 50px;
     width: 50px;
@@ -136,14 +161,11 @@ li{
     margin-bottom: 10px;
 }
 
+/*Estilo do icone de carrinho de compra*/
 .icon_carrinho{
     background-color: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
-}
-
-.carrinho{
-    text-align: center;
 }
 
