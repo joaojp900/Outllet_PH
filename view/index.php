@@ -18,7 +18,7 @@
     <header>
         <ol>
             <li><h2>Outllet PH</h2></li>
-            <li><a href="carrinho.html"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
+            <li><a href="<?php ?>"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
         </ol>
     </header>
     <div class="teste">
@@ -31,52 +31,47 @@
     </div>
 
     <div class="h1">
-        <h1>Produtos</h1>
+            <h1>Produtos</h1>
     </div>
+    <div class="carrinho-container">
 
-    <?php
-        $item = array(['nome' => 'mizuno_pro3', 'imagem'=>'image/mizuno_pro3.jpeg', 'preco' =>'340'], ['nome' => 'mizuno_pro6', 'imagem'=>'image/mizuno_pro6.jpeg', 'preco' =>'300'],
-        ['nome' => 'nike_dunk','imagem'=>'image/nike_dunk.jpeg', 'preco' =>'150'], ['nome' => 'nike_tn3','imagem'=>'image/nike_tn3.jpeg', 'preco' =>'300']);
-    
-        foreach ($item as $key => $value){
-    ?>
+        <?php
 
-        <!--Grid de produtos-->
-    <section class="grid1">
-        <div class="prod_border">
-            <img src="<?php echo $value ['imagem']?>" alt="MIZUNO PRO 3" class="produtos">
-            <p class="text">MIZUNO PRO 3</p>
-            <p class="text">R$: 340,00</p>
-            <a href="?adicionar=<?php echo $key ?>"><button type="submit">COMPRAR</button></a>
-        </div>
-    </section>
-        
-    <?php
-        }
-    
-    ?>
+        //No caso de um sistema real, os dados abaixo devem vir do banco de dados
+        $items = array(
+            ['idProduto' => 1 ,'nomeProduto' => 'Gabinete Gamer', 'imagemProduto' => 'image/mizuno_pro3.jpeg', 'precoProduto' => '200.60'],
+            ['idProduto' => 2, 'nomeProduto' => 'Webcam Logitech', 'imagemProduto' => 'image/mizuno_pro6.jpeg', 'precoProduto' => '100'],
+            ['idProduto' => 3, 'nomeProduto' => 'Monitor Gamer', 'imagemProduto' => 'image/nike_dunk.jpeg', 'precoProduto' => '30000.78']
+        );
 
-    <?php
-        if(isset($_GET['adicionar'])){
-            $idProduto = (int) $_GET['adicionar'];
-            if(isset($item[$idProduto])){
-                if(isset($_SESSION[$idProduto])){
-                    $_SESSION['carrinho'][$idProduto]['quantidade']++;
-                }else{
-                    $_SESSION['carrinho'][$idProduto] = array('quantidade'=>1, 'nome'=>$item[$idProduto]['nome'], 'preco'=>$item[$idProduto]['preco']);
-                }
-                echo'<script>alert("Item adicionado ao carrinho");</script>)';
-            }else{
-                die('O produto não existe');
-            }
+        //print_r($items);
+
+        foreach ($items as $value) {
+        ?>
+            <div class="prod_border">
+                <img src="<?php echo $value['imagemProduto']; ?>" alt="Imagem do produto" class="img_prod">
+                <br>
+                <?php echo $value['nomeProduto']; ?>
+                <br>
+                <b>
+                <?php echo "R$" . number_format($value['precoProduto'], 2, ",", ".") ?></b>
+                <br>
+                <a href="?idProduto=<?php echo $value['idProduto']-1; ?>">Adicionar ao carrinho</a>
+            </div>
+            <!--produto-->
+
+        <?php
         }
-    ?>
-    <h2 class="carrinho_php">Carrinho:</h2>
-    <?php
-        foreach($_SESSION['carrinho'] as $key => $value){
-            echo $value['nome'], $value['quantidade'], $value['preco'];
-        }
-    ?>
+        unset($value);
+        ?>
+
+    </div>
+    <!--carrinho-container-->
+
+
+
+
+
 
     <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">
