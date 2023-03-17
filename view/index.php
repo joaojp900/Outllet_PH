@@ -1,7 +1,3 @@
-
-<?php 
-   session_start();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,48 +27,32 @@
     </div>
 
     <div class="h1">
-            <h1>Produtos</h1>
+        <h1 class="prod_txt">Produtos</h1></li>
+        
     </div>
-    <div class="carrinho-container">
 
-        <?php
-
-        //No caso de um sistema real, os dados abaixo devem vir do banco de dados
-        $items = array(
-            ['idProduto' => 1 ,'nomeProduto' => 'Gabinete Gamer', 'imagemProduto' => 'image/mizuno_pro3.jpeg', 'precoProduto' => '200.60'],
-            ['idProduto' => 2, 'nomeProduto' => 'Webcam Logitech', 'imagemProduto' => 'image/mizuno_pro6.jpeg', 'precoProduto' => '100'],
-            ['idProduto' => 3, 'nomeProduto' => 'Monitor Gamer', 'imagemProduto' => 'image/nike_dunk.jpeg', 'precoProduto' => '30000.78']
-        );
-
-        //print_r($items);
-
-        foreach ($items as $value) {
-        ?>
-            <div class="prod_border">
-                <img src="<?php echo $value['imagemProduto']; ?>" alt="Imagem do produto" class="img_prod">
-                <br>
-                <?php echo $value['nomeProduto']; ?>
-                <br>
-                <b>
-                <?php echo "R$" . number_format($value['precoProduto'], 2, ",", ".") ?></b>
-                <br>
-                <a href="?idProduto=<?php echo $value['idProduto']-1; ?>">Adicionar ao carrinho</a>
-            </div>
-            <!--produto-->
-
-        <?php
-        }
-        unset($value);
-        ?>
-
+    <!--Categoria e organizar por-->
+    <div>
+        <ol>
+            <li><h2 class="categoria_h2">Categorias</h2></li>
+            <li>
+                <select name="filter" id="filter" class="select">
+                    <option disabled="" selected="">Ordernar por </option>
+                    <option value="highPrice">Maior preço</option>
+                    <option value="alphabeticalOrder">Ordem alfabética</option>
+                    <option value="inclusionDateOld">Data de inclusão (mais antigo)</option>
+                    <option value="inclusionDateLast">Data de inclusão (mais recente)</option>
+                </select>
+            </li>    
+        </ol>
     </div>
-    <!--carrinho-container-->
 
-
-
-
-
-
+    <!--Categorias-->
+    <ol>
+        <li><input type="checkbox" name="" id="" class="check_cate"></li>
+        <li><p>Tenis de primeira linha</p></li>
+    </ol>
+   
     <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">
         <a href="https://api.whatsapp.com/send/?phone=5511940547458&text&type=phone_number&app_absent=0" target="_blank"><img src="https://storage.googleapis.com/neuro-cdn/uploads/72d189bd35267b7a5707699a3705e293.png" alt="whatsapp"></a>
