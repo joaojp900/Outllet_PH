@@ -1,0 +1,109 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+header{
+    background-color: black;
+    margin-top: -20px;
+    margin-bottom: -60px;
+}
+
+.logo{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-top: 1px solid #303030;
+}
+
+
+/*estilo icone do carrinho*/
+.icon_carrinho{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+/*Alinha o icone carrinho lado superior direito*/
+header ol li a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+/*Alinha e coloca cor no texto Outtlet PH*/
+body > header > ol > li:nth-child(1) > h2{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*Alinha nome, preço e botão*/
+body > div:nth-child(3) > ol{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    text-align: center;
+}
+
+body > div:nth-child(4){
+    position: absolute;
+    bottom: 0;
+}
+
+/*Cor do texto nome do produto*/
+h3{
+    color: rgb(44, 44, 44);
+}
+
+
+button{
+    margin-top: 8px; 
+    background-color: #000000; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    color: white;
+    width: 300px;
+    cursor: pointer;
+    height: 50px;
+    text-shadow: 2px 2px 2px gray;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    text-shadow: 2px 2px 2px rgb(80, 79, 79);
+}
+
+/*Espaçamento e borda nos icones flutuantes*/
+.whatsapp img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/*Alinha e seta tamanho nos icones flutuantes*/
+.whatsapp{
+    text-align: right;
+    float: right;
+    width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+    position: fixed;
+    margin-bottom: 25px;
+}

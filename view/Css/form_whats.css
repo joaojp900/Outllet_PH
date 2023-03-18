@@ -1,0 +1,130 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+header{
+    background-color: black;
+    margin-top: -20px;
+    margin-bottom: -60px;
+}
+
+body > form > div.center > ol > li:nth-child(1) > h1{
+    text-shadow: 4px 4px 4px rgb(70, 69, 69);
+}
+
+
+
+.logo{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-top: 1px solid #303030;
+}
+
+/*estilo icone do carrinho*/
+.icon_carrinho{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+/*Alinha o icone carrinho lado superior direito*/
+header ol li a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+/*Alinha e coloca cor no texto Outtlet PH*/
+body > header > ol > li:nth-child(1) > h2{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background: black;
+	color: white;
+	border-style: outset;
+	border-color: gray;
+	height: 50px;
+	width: 100px;
+	font: bold15px arial,sans-serif;
+	text-shadow: none;
+    border-radius: 5px;
+}
+
+
+button:hover{
+    background-color: white;
+    color: black;
+    text-shadow: 2px 2px 2px black;
+}
+
+input{ 
+    width: 600px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+textarea{
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    border-color: black;
+}
+
+
+/*Tira estilo da lista*/
+body > form > div.center > ol{
+    list-style: none;
+}
+
+/*Espaçamento e borda nos icones flutuantes*/
+.whatsapp img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/*Alinha e seta tamanho nos icones flutuantes*/
+.whatsapp{
+    text-align: right;
+    float: right;
+    width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+    position: fixed;
+    margin-bottom: 25px;
+}

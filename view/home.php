@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outllet PH</title>
-    <link rel="stylesheet" href="Css/index.css"> 
+    <link rel="stylesheet" href="Css/home.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
@@ -17,9 +17,6 @@
             <li><a href="<?php ?>"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
         </ol>
     </header>
-    <div class="teste">
-
-    </div>
 
     <!--Logo abaixo-->
     <div class="logo">
@@ -33,7 +30,7 @@
 
     <!--Categoria e organizar por-->
     <div>
-        <ol>
+        <ul>
             <li><h2 class="categoria_h2">Categorias</h2></li>
             <li>
                 <select name="filter" id="filter" class="select">
@@ -44,7 +41,7 @@
                     <option value="inclusionDateLast">Data de inclusão (mais recente)</option>
                 </select>
             </li>    
-        </ol>
+        </ul>
     </div>
 
     <!--Categorias-->
