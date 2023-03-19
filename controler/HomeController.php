@@ -1,5 +1,7 @@
 <?php
     class abrir{
+
+        
         public function home(){
             include_once 'view/home.php';
         }
