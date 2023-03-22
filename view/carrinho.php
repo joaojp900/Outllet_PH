@@ -10,8 +10,7 @@
 <body>
     <header>
         <ol>
-            <li><h2>Outllet PH</h2></li>
-            <li><a href="carrinho.html"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
+            <li><a href="<?php ?>home"><h2>OUTLLET PH</h2></a></li>
         </ol>
     </header>
 
@@ -19,7 +18,11 @@
         <img src="image/header.jpeg" alt="Logo">
     </div>
 
-    
+        <!--Icones whatsapp e instagram-->
+	<div class="whatsapp">
+        <a href="https://api.whatsapp.com/send/?phone=5511940547458&text&type=phone_number&app_absent=0" target="_blank"><img src="https://storage.googleapis.com/neuro-cdn/uploads/72d189bd35267b7a5707699a3705e293.png" alt="whatsapp"></a>
+        <a href="https://www.instagram.com/outllet_ph/" target="_blank"><img src="image/instagram.png" alt="Instagram" ></a>
+    </div>
     
 
 </body>

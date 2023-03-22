@@ -16,7 +16,7 @@ img{
 header{
     background-color: black;
     margin-top: -20px;
-    margin-bottom: -20px;
+    margin-bottom: -40px;
 }
 
 
@@ -30,21 +30,6 @@ header{
     margin: 0px;
     border: 0px;
     border-top: 1px solid #303030;
-}
-
-
-/*Alinha o icone carrinho lado superior direito*/
-header ol li a{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 20px;
-    margin-top: 20px;
-    list-style: none;
-}
-
-body > header > ol > li:nth-child(2){
-    margin-top: -30px;
 }
 
 /*Coloca cor no texto no cabeçalho*/
@@ -68,8 +53,6 @@ body > header > ol > li:nth-child(1) > h2{
         order: -1;
     }
 }
-
-
 
 
 .h1{
@@ -118,6 +101,7 @@ body > ol > li:nth-child(2) > p{
     padding-left: 10px;
 }
 
+/*Checkbox categoria*/
 .check_cate{
     margin-left: 20px;
 }
@@ -175,15 +159,27 @@ p{
     width: 40px;
     height: 40px;
     border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    list-style: none;
 }
 
-.carrinho-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px;
+.icon_login{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 80px;
+    margin-top: 20px;
 }
+
+
 
 .img_prod{
     width: 300px;

@@ -33,21 +33,22 @@ header{
     border-radius: 5px;
 }
 
-/*Alinha o icone carrinho lado superior direito*/
-header ol li a{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 20px;
-    margin-top: 20px;
-    list-style: none;
+
+a{
+    text-decoration: none;
 }
 
 /*Alinha e coloca cor no texto Outtlet PH*/
-body > header > ol > li:nth-child(1) > h2{
+body > header > ol > li > a > h2{
     color: white;
     padding: 20px;
     margin-top: 20px;
+    text-decoration: none;
+}
+
+/*Tira estilo do link*/
+body > header > ol > li > a{
+    text-decoration: none;
 }
 
 body > h1{
@@ -97,6 +98,14 @@ input{
 
 body > form > div > ul{
     list-style: none;
+}
+
+/*Estilo botão entrar*/
+body > form > div > ul > li:nth-child(5) > input[type=submit]{
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 100px;
 }
 
 

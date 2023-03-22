@@ -11,7 +11,7 @@
     <!--cabeçalho da página-->
     <header>
         <ol>
-            <li><h2>Outllet PH</h2></li>
+            <li><a href="<?php ?>home"><h2>Outllet PH</h2></a></li>
             <li><a href=""><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
         </ol>
     </header>

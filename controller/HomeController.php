@@ -14,6 +14,18 @@
             include_once 'view/carrinho.php';
         }
 
+        public function login(){
+            include_once 'view/login.php';
+        }
+
+        public function produtos(){
+            include_once 'view/produto.php';
+        }
+
+        public function form_whats(){
+            include_once 'view/form_whats.php';
+        }
+
     }
 
 ?>

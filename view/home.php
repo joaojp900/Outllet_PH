@@ -13,9 +13,12 @@
     <!--cabeçalho da página-->
     <header>
         <ol>
-            <li><h2>Outllet PH</h2></li>
-            <li><a href="<?php ?>"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
+            <li><h2>OUTLLET PH</h2></li>
+            <li><a href="<?php ?>carrinho"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
         </ol>
+        <div class="icon_login">
+            <a href="<?php ?>login"><img src="image/login.png" alt="login"></a>
+        </div>
     </header>
 
     <!--Logo abaixo-->

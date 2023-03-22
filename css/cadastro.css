@@ -36,10 +36,6 @@ header{
     width: 40px;
     height: 40px;
     border-radius: 5px;
-}
-
-/*Alinha o icone carrinho lado superior direito*/
-header ol li a{
     position: absolute;
     top: 0;
     right: 0;
@@ -48,11 +44,31 @@ header ol li a{
     list-style: none;
 }
 
+/*estilo icone do sair*/
+.icon_sair{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 80px;
+    margin-top: 20px;
+    list-style: none;
+}
+
 /*Alinha e coloca cor no texto Outtlet PH*/
-body > header > ol > li:nth-child(1) > h2{
+body > header > ol > li:nth-child(1) > a > h2{
     color: white;
     padding: 20px;
     margin-top: 20px;
+
+}
+
+body > header > ol > li:nth-child(1) > a{
+    text-decoration: none;
 }
 
 body > h1{

@@ -14,10 +14,22 @@ header{
     margin-bottom: -60px;
 }
 
+/*Alinha e coloca cor no texto Outtlet PH*/
+body > header > ol > li:nth-child(1) > a > h2{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/*Tira estilo do link*/
+body > header > ol > li:nth-child(1) > a{
+    text-decoration: none;
+}
+
 body > form > div.center > ol > li:nth-child(1) > h1{
     text-shadow: 4px 4px 4px rgb(70, 69, 69);
 }
-
 
 
 .logo{
@@ -40,7 +52,7 @@ body > form > div.center > ol > li:nth-child(1) > h1{
 }
 
 /*Alinha o icone carrinho lado superior direito*/
-header ol li a{
+body > header > ol > li:nth-child(2) > a > img{
     position: absolute;
     top: 0;
     right: 0;

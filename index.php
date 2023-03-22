@@ -1,7 +1,8 @@
 <?php
-include_once 'controler/HomeController.php';
-include_once 'controler/Conexao.php';
-include_once 'controler/ServicoController.php';
+include_once 'controller/HomeController.php';
+include_once 'controller/Conexao.php';
+include_once 'controller/ServicoController.php';
+include_once 'model/servico.php';
 
 //minha url
 define('URL','http://localhost/Outllet_PH/');
@@ -27,6 +28,26 @@ if(isset($_GET['url']))
         case'carrinho':
             $usu = new abrir();
             $usu->carrinho();
+        break;
+
+        case'login':
+            $usu = new abrir();
+            $usu->login();
+        break;
+
+        case'produtos':
+            $usu = new abrir();
+            $usu->produtos();
+        break;
+
+        case'form_whats':
+            $usu = new abrir();
+            $usu->form_whats();
+        break;
+
+        case 'ver_login':
+            $usu = new servico();
+            $usu->logar();
         break;
 
         default:
