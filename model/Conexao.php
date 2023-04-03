@@ -5,7 +5,7 @@
         {
             $host = "localhost";//servidor
             $port = "3306";//porta
-            $dbname= "outlet"; //nome do banco de dados
+            $dbname= "outllet"; //nome do banco de dados
             $user = "root"; //usuário do BD
             $pwd = "root"; //senha do BD
     

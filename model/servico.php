@@ -2,14 +2,19 @@
     session_start();
 
     class servico{
+        public $nome;
+        public $preco;
+        public $codproduto;
+        public $descricao;
+        public $imagem;
 
         public function __construct()
         {
-            include_once 'controller/Conexao.php';
+            include_once 'model/Conexao.php';
         }
 
         //Função para verificar login no banco de dados
-        function logar(){
+        public function logar(){
             
             $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -36,6 +41,27 @@
                 }
             }
         }
+
+        public function cadastrar(){
+            $con = Conexao::conectar(); //conectar no BD
+            //comando SQL para cadastrar (INSERT)
+            $cmd = $con->prepare("INSERT INTO produtos (nome, preco, descricao, imagem) 
+            VALUES (:nome, :preco, :descricao,:imagem)");
+            //enviando o valor dos parâmetros
+            $cmd->bindParam(":nome",          $this->nome);
+            $cmd->bindParam(":preco",            $this->preco);
+            $cmd->bindParam(":descricao",    $this->descricao);
+            $cmd->bindParam(":imagem",          $this->imagem);
+            $cmd->execute(); //executar o comando
+        }
+
+        public function inicio(){
+            $con = Conexao::conectar();
+            $query = 'SELECT * FROM produtos';
+            $cmd = $con->query($query);
+            $_SESSION['pega_produt'] = $cmd;
+        }
+
          
     }
 ?>

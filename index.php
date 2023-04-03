@@ -1,6 +1,6 @@
 <?php
 include_once 'controller/HomeController.php';
-include_once 'controller/Conexao.php';
+include_once 'model/Conexao.php';
 include_once 'controller/ServicoController.php';
 include_once 'model/servico.php';
 
@@ -48,6 +48,11 @@ if(isset($_GET['url']))
         case 'ver_login':
             $usu = new servico();
             $usu->logar();
+        break;
+
+        case'enviar':
+            $usu = new ServicoController();
+            $usu->cadastrar();
         break;
 
         default:

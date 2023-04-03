@@ -29,16 +29,16 @@
     </div>
 
     <h1 class="center">Cadastro de novos produtos.</h1>
-    <form action="" method="post">
+    <form action="enviar" method="post" enctype="multipart/form-data">
         <div class="center">
             <ul>
-                <li><input type="text" placeholder="Nome do produto"></li>
+                <li><input type="text" name="nome" placeholder="Nome do produto"></li>
                 <br>
-                <li><input type="text" name="" id="" placeholder="Preço"></li>
+                <li><input type="text" name="preco" placeholder="Preço"></li>
                 <br>
-                <li><textarea name="" id="" cols="30" rows="10" placeholder="Descrição do produto"></textarea></li>
+                <li><textarea name="descricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea></li>
                 <br>
-                <li><input type="file" name="" id=""></li>
+                <li><input type="file" name="image" accept="image/*"></li>
             </ul>
         </div>
         <div class="btn_center">

@@ -52,6 +52,26 @@
         <li><input type="checkbox" name="" id="" class="check_cate"></li>
         <li><p>Tenis de primeira linha</p></li>
     </ol>
+
+    <section class="grid1">
+        <?php
+                include_once'model/servico.php';
+                $fun = new servico;
+                $fun->inicio();
+                $produtos = $_SESSION['pega_produt'];
+                foreach ($produtos as $produto) {
+                    $img = 'img/'.$produto['imagem'];
+                    $nome = $produto['nome'];
+                    $preco = 'R$: '.$produto['preco'].',00';
+                    ?>
+                        <div class="prod_border">
+                            <?php echo "<img src=$img class='img_prod'>"; ?>
+                            <?php echo "<p class='prod_txt'> $nome </p>"?>
+                            <?php echo "<p class='prod_txt'>$preco</p>"?>
+                            <button type="submit"> Adicionar ao carrinho</button>
+                        </div>
+        <?php }?>
+    </section>
    
     <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">
