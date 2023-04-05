@@ -65,9 +65,9 @@
                     $preco = 'R$: '.$produto['preco'].',00';
                     ?>
                         <div class="prod_border">
-                            <?php echo "<img src=$img class='img_prod'>"; ?>
-                            <?php echo "<p class='prod_txt'> $nome </p>"?>
-                            <?php echo "<p class='prod_txt'>$preco</p>"?>
+                            <a href="<?php ?>produtos"><?php echo "<img src=$img class='img_prod'>"; ?></a>
+                            <a href="<?php ?>produtos"><?php echo "<p class='prod_txt'> $nome </p>";?></a>
+                            <?php echo "<p class='prod_txt'>$preco</p>";?>
                             <button type="submit"> Adicionar ao carrinho</button>
                         </div>
         <?php }?>

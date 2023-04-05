@@ -140,3 +140,15 @@ textarea{
     position: fixed;
     margin-bottom: 25px;
 }
+
+.tamanho_tenis{
+    background: #fff;
+    border: 1px solid black;
+    border-radius: var(--theme-border-radius);
+    font-family: inherit;
+    font-size: var(--font-14);
+    font-weight: var(--font-medium);
+    padding: 0 40px 0 20px;
+    text-overflow: ellipsis;
+    width: 100%;
+}

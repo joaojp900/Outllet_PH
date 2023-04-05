@@ -112,3 +112,34 @@ button:hover{
     position: fixed;
     margin-bottom: 25px;
 }
+
+.btn_quantidade{
+    border: none;
+    background: white;
+    font-size: larger;
+}
+
+#txt_quant{
+    border: none;
+    text-align: center;
+    font-size: larger;
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#quantidade {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+}
+
+select{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: medium;
+    border-radius: 5px;
+}
