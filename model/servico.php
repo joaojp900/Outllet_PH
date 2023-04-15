@@ -47,6 +47,7 @@
             //comando SQL para cadastrar (INSERT)
             $cmd = $con->prepare("INSERT INTO produtos (nome, preco, descricao, imagem) 
             VALUES (:nome, :preco, :descricao,:imagem)");
+
             //enviando o valor dos parâmetros
             $cmd->bindParam(":nome",          $this->nome);
             $cmd->bindParam(":preco",            $this->preco);
@@ -59,7 +60,18 @@
             $con = Conexao::conectar();
             $query = 'SELECT * FROM produtos';
             $cmd = $con->query($query);
-            $_SESSION['pega_produt'] = $cmd;
+            $result = $cmd->fetchAll(PDO::FETCH_ASSOC);
+            $_SESSION['pega_produt'] = $result;
+        }
+
+        public function info_prod($id){
+            $con = Conexao::conectar();
+            $query = 'SELECT * from produtos WHERE codproduto = :id';
+            $cmd = $con->prepare($query);
+            $cmd->bindParam(":id", $id);
+            $cmd->execute();
+            $result = $cmd->fetchAll(PDO::FETCH_ASSOC);
+            $_SESSION['pega_descri'] = $result;
         }
 
          

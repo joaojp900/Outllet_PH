@@ -93,6 +93,7 @@ body > header > ol > li:nth-child(1) > h2{
     border: 1px solid #CCC;
     border-radius: 5px;
     padding: 10px;
+    border-bottom: 10px;
 }
 
 /*Estilo do organizar por*/
@@ -127,7 +128,13 @@ body > ol > li:nth-child(2) > p{
     margin-left: 20px;
 }
 
-button{
+
+.env{
+    background-color: none;
+    border: none;
+}
+
+.btn{
     margin-top: 8px; 
     background-color: #000000; 
     text-overflow: ellipsis; 
@@ -138,7 +145,7 @@ button{
     height: 50px;
     text-shadow: 2px 2px 2px gray;
 }
-button:hover{
+.btn:hover{
     background-color: white;
     color: black;
     text-shadow: 2px 2px 2px black;

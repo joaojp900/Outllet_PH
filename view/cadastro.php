@@ -38,7 +38,7 @@
                 <br>
                 <li><textarea name="descricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea></li>
                 <br>
-                <li><input type="file" name="image" accept="image/*" multiple></li>
+                <li><input type="file" name="image" accept="image/*" multiple require></li>
             </ul>
         </div>
         <div class="btn_center">

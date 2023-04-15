@@ -18,7 +18,8 @@
         <img src="image/header.jpeg" alt="Logo">
     </div>
     <?php
-        
+        $teste = $_POST['id'];
+        echo($teste);
     ?>
         <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">

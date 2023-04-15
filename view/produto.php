@@ -21,10 +21,17 @@
         <img src="image/header.jpeg" alt="Logo">
     </div>
 
+    <?php
+        $id = $_POST['id'];
+        $fun = new ServicoController;
+        $fun->info_prod($id);
+        $produto = $_SESSION['pega_descri'];
+    ?>
+
     <div>
         <ol>
-            <li><h3>Nome do produto</h3></li>
-            <li><h2>RS: 99,99</h2></li>
+            <li><h3><?php echo($produto[0]['nome'])?></h3></li>
+            <li><h2><?php echo('R$: '.$produto[0]['preco'].',00') ?></h2></li>
             <li>
                 <p>Selecione uma opção</p>
             </li>
@@ -37,9 +44,9 @@
             </li>
             <li>
                 <div id="quantidade">
-                    <input type="button" name="menos" value="+" class="btn_quantidade">
+                    <input type="button" name="menos" value="+" class="btn_quantidade" id="mais">
                     <input type="text" name="txt_quant" readonly value="0" id='txt_quant'>
-                    <input type="button" name="mais" value="-" class="btn_quantidade">
+                    <input type="button" name="mais" value="-" class="btn_quantidade" id="menos">
                 </div>
             </li>
             <li><button>Adicionar ao carrinho</button></li>
@@ -48,7 +55,7 @@
 
     <div>
         <h3>Descrição</h3>
-        <p>Produto lalalalala</p>
+        <p><?php echo ($produto[0]['descricao'])?></p>
     </div>
 
             <!--Icones whatsapp e instagram-->
@@ -58,9 +65,9 @@
     </div>
 
     <script >
-        var mais = document.getElementsByName('menos')[0]
-        var menos = document.getElementsByName('mais')[0]
-        var txt_quant = document.getElementsByName('txt_quant')[0]
+        var mais = document.querySelector("input#mais")
+        var menos = document.querySelector("input#menos")
+        var txt_quant = document.querySelector("input#txt_quant")
 
         function mais_prod(){
             txt_quant.value = parseInt(txt_quant.value)+1

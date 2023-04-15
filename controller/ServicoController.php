@@ -48,7 +48,19 @@
                         </script>";
 
             }
+
         
+        }
+
+        public function inicio(){
+            $fun = new servico;
+            $fun->inicio();
+        }
+
+
+        public function info_prod($id){
+            $fun = new servico;
+            $fun->info_prod($id);
         }
     }
 ?>

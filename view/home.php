@@ -14,10 +14,10 @@
     <header>
         <ol>
             <li><h2>OUTLLET PH</h2></li>
-            <li><a href="<?php ?>carrinho"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
+            <li><a href="carrinho"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
         </ol>
         <div class="icon_login">
-            <a href="<?php ?>login"><img src="image/login.png" alt="login"></a>
+            <a href="login"><img src="image/login.png" alt="login"></a>
         </div>
     </header>
 
@@ -49,28 +49,34 @@
 
     <!--Categorias-->
     <ol>
-        <li><input type="checkbox" name="" id="" class="check_cate"></li>
+        <li><input type="checkbox" class="check_cate"></li>
         <li><p>Tenis de primeira linha</p></li>
     </ol>
 
     <section class="grid1">
         <?php
-                include_once'model/servico.php';
-                $fun = new servico;
+                $fun = new ServicoController;
                 $fun->inicio();
                 $produtos = $_SESSION['pega_produt'];
                 foreach ($produtos as $produto) {
                     $img = 'img/'.$produto['imagem'];
                     $nome = $produto['nome'];
                     $preco = 'R$: '.$produto['preco'].',00';
-                    ?>
+        ?>
                         <div class="prod_border">
-                            <a href="<?php ?>produtos"><?php echo "<img src=$img class='img_prod'>"; ?></a>
-                            <a href="<?php ?>produtos"><?php echo "<p class='prod_txt'> $nome </p>";?></a>
+                            <form action="produtos" method="post">
+                                <button type="submit" class="env"><?php echo "<img src=$img class='img_prod'>"; ?></button>
+                                <a href="produtos"><?php echo "<p class='prod_txt'> $nome </p>";?></a>
+                                <input type="hidden" name="id" value="<?php echo $produto['codproduto'];?>">
+                            </form>
+
                             <?php echo "<p class='prod_txt'>$preco</p>";?>
-                            <button type="submit"> Adicionar ao carrinho</button>
+                            <form action="carrinho" method="post">
+                                <input type="hidden" name="id" value="<?php echo $produto['codproduto'];?>">
+                                <button type="submit" class="btn">Adicionar ao carrinho</button>
+                            </form>
                         </div>
-        <?php }?>
+        <?php   }?>
     </section>
    
     <!--Icones whatsapp e instagram-->
