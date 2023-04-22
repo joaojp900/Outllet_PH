@@ -31,25 +31,47 @@
             $cad->descricao = $_POST["descricao"];
             $cad->imagem = 'semimagem.jpg';
 
-            if(isset($_FILES['image'])){
-
-                $extensão = strtolower(substr($_FILES['image']['name'], -5));
-                $novo_nome = md5(time()).$extensão;
-                $diretorio = "img/";
-
-                move_uploaded_file($_FILES['image']['tmp_name'],$diretorio .$novo_nome);
-
-                $cad->imagem = $novo_nome;
-                $cad->cadastrar();
-
-                echo "<script>
+            $targetDir = "img/"; // Pasta de destino para os arquivos enviados
+            $uploadedFiles = $_FILES['image']; // Arquivos enviados
+            $numFiles = count($uploadedFiles['name']); // Número de arquivos enviados
+            $fileName = basename($uploadedFiles['name'][0]);
+            $targetFilePath = $targetDir . $fileName;
+                // Tenta mover o arquivo enviado para a pasta de destino
+                if (move_uploaded_file($uploadedFiles['tmp_name'][0], $targetFilePath)) {
+                    $cad->imagem = $fileName;
+                    $cad->cadastrar();
+                    echo "<script>
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';
                         </script>";
+                } else {
+                    echo "<script>
+                    alert('Erro ao enviar os arquivos!');
+                    window.location='".URL."home';
+                    </script>";
+                }
+            // Loop através de todos os arquivos enviados
+            for ($i = 1; $i < $numFiles; $i++) {
+                $fileName = basename($uploadedFiles['name'][$i]); // Nome do arquivo
+                $targetFilePath = $targetDir . $fileName; // Caminho completo do arquivo de destino
 
+                // Tenta mover o arquivo enviado para a pasta de destino
+                if (move_uploaded_file($uploadedFiles['tmp_name'][$i], $targetFilePath)) {
+                    $cad->imagem = $fileName;
+                    //colocar na tabela nova
+                    
+                    echo "<script>
+                        alert('Dados gravados com sucesso!');
+                        window.location='".URL."home';
+                        </script>";
+                } else {
+                    echo "<script>
+                    alert('Erro ao enviar os arquivos!');
+                    window.location='".URL."home';
+                    </script>";
+                }
             }
-
-        
+       
         }
 
         public function inicio(){

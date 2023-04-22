@@ -56,6 +56,10 @@
             $cmd->execute(); //executar o comando
         }
 
+        //outra função para cadastrar as outras fotos no banco
+        
+
+        //seleciona produtos que aparece na home
         public function inicio(){
             $con = Conexao::conectar();
             $query = 'SELECT * FROM produtos';
@@ -64,6 +68,7 @@
             $_SESSION['pega_produt'] = $result;
         }
 
+        //seleciona produto que aparece na descrição do produto
         public function info_prod($id){
             $con = Conexao::conectar();
             $query = 'SELECT * from produtos WHERE codproduto = :id';
