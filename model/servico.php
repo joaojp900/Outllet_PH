@@ -58,7 +58,16 @@
 
         //outra função para cadastrar as outras fotos no banco
         
+        public function cadastrar2(){
+            $con = Conexao::conectar(); //conectar no BD
+            //comando SQL para cadastrar (INSERT)
+            $cmd = $con->prepare("INSERT INTO imagens (imagem) 
+            VALUES (:imagem)");
 
+            //enviando o valor dos parâmetros
+            $cmd->bindParam(":imagem",          $this->imagem);
+            $cmd->execute(); //executar o comando
+        }
         //seleciona produtos que aparece na home
         public function inicio(){
             $con = Conexao::conectar();

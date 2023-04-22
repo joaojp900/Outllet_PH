@@ -21,9 +21,35 @@
             }
         }
 
+        /*public function cadastrar2($uploadedFiles){
+            $cad = new servico();
+            $targetDir = "img/"; // Pasta de destino para os arquivos enviados
+            $numFiles = count($uploadedFiles['name']); // Número de arquivos enviados
+            // Loop através de todos os arquivos enviados
+            for ($i = 1; $i < $numFiles; $i++) {
+                $fileName = basename($uploadedFiles['name'][$i]); // Nome do arquivo
+                $targetFilePath = $targetDir . $fileName; // Caminho completo do arquivo de destino
+
+                // Tenta mover o arquivo enviado para a pasta de destino
+                if (move_uploaded_file($uploadedFiles['tmp_name'][$i], $targetFilePath)) {
+                    $cad->imagem = $fileName;
+                    //colocar na tabela nova
+                    $cad->cadastrar2();
+                    echo "<script>
+                        alert('Dados gravados com sucesso!');
+                        window.location='".URL."home';
+                        </script>";
+                } else {
+                    echo "<script>
+                    alert('Erro ao enviar os arquivos!');
+                    window.location='".URL."home';
+                    </script>";
+                }
+            }
+        }*/
+
         public function cadastrar(){
-    
-    
+
             $cad = new servico();
 
             $cad->nome = $_POST["nome"];
@@ -40,6 +66,7 @@
                 if (move_uploaded_file($uploadedFiles['tmp_name'][0], $targetFilePath)) {
                     $cad->imagem = $fileName;
                     $cad->cadastrar();
+                    $cad->cadastrar2($uploadedFiles);
                     echo "<script>
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';
@@ -59,7 +86,7 @@
                 if (move_uploaded_file($uploadedFiles['tmp_name'][$i], $targetFilePath)) {
                     $cad->imagem = $fileName;
                     //colocar na tabela nova
-                    
+                    $cad->cadastrar2();
                     echo "<script>
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';

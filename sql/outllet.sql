@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Abr-2023 às 23:38
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Generation Time: Apr 22, 2023 at 11:21 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,14 +18,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `outllet`
+-- Database: `outllet`
 --
-CREATE DATABASE outllet;
+
+CREATE Database outllet;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produtos`
+-- Table structure for table `imagens`
+--
+
+CREATE TABLE `imagens` (
+  `id` int(11) NOT NULL,
+  `imagem` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `imagens`
+--
+
+INSERT INTO `imagens` (`id`, `imagem`) VALUES
+(1, 'Foto_Perfil.png'),
+(2, 'Fundo-linkedin.jpeg'),
+(3, 'GitHub-logo.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produtos`
 --
 
 CREATE TABLE `produtos` (
@@ -37,18 +58,16 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `produtos`
+-- Dumping data for table `produtos`
 --
 
 INSERT INTO `produtos` (`codproduto`, `nome`, `preco`, `descricao`, `imagem`) VALUES
-(61, 'MIZUNO PRO 3', 340, 'MIZUNO MAIS RELÍQUIA DE TODOS E importado qualidade viatnã', '1f9db6a0be427c8b9c3550e0dc86a38a.jpeg'),
-(62, 'MIZUNOS PRO 6,7,8,9,X,11', 300, 'MIZUNO IMPORTADOS \r\n\r\nCONSULTAR TAMANHOS DISPONÍVEIS\r\n\r\nVIATNÃ\r\nCONFORTO 100%\r\nTÊNIS ESPORTIVO', 'c56e21505b576cbbc7049bbdcd4c8d4e.jpeg'),
-(66, 'Nike dunk', 450, 'Nike dunk', '7f8f35a2cbcff96bb27246a9170a0b3f.jpeg');
+(1, 'JP do odio', 123, '123', 'Foto_Perfil.png');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -58,7 +77,7 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `usuario`
+-- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `senha`) VALUES
@@ -66,33 +85,45 @@ INSERT INTO `usuario` (`id`, `nome`, `senha`) VALUES
 (3, 'ph', '123');
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `produtos`
+-- Indexes for table `imagens`
+--
+ALTER TABLE `imagens`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
   ADD PRIMARY KEY (`codproduto`);
 
 --
--- Índices para tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `produtos`
+-- AUTO_INCREMENT for table `imagens`
+--
+ALTER TABLE `imagens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `codproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
