@@ -24,7 +24,7 @@
 
     <!--Logo abaixo-->
     <div class="logo">
-        <img src="image/header.jpeg" alt="Logo">
+        <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
     <h1>Logar</h1>
     <form action="ver_login" method="post">

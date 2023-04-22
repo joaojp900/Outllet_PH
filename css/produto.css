@@ -51,13 +51,8 @@ body > header > ol > li:nth-child(1) > a > h2{
     margin-top: 20px;
 }
 
-/*Tira estilo do link*/
-body > header > ol > li:nth-child(1) > a{
-    text-decoration: none;
-}
-
 /*Alinha nome, preço e botão*/
-body > div:nth-child(3) > ol{
+.info{
     list-style: none;
     position: absolute;
     right: 0;
@@ -65,9 +60,10 @@ body > div:nth-child(3) > ol{
     text-align: center;
 }
 
-body > div:nth-child(4){
+.descricao{
     position: absolute;
     bottom: 0;
+    margin-left: 50px;
 }
 
 /*Cor do texto nome do produto*/
@@ -87,6 +83,7 @@ button{
     height: 50px;
     text-shadow: 2px 2px 2px gray;
 }
+
 button:hover{
     background-color: white;
     color: black;
@@ -126,14 +123,16 @@ button:hover{
     width: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
-#quantidade {
+.quantidade{
     border: 1px solid #000000;
     border-radius: 10px;
     margin-top: 10px;
     width: 120px;
     height: 40px;
+    display: inline-block
 }
 
 select{
@@ -142,4 +141,9 @@ select{
     text-align: center;
     font-size: medium;
     border-radius: 5px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
 }

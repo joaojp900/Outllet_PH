@@ -23,7 +23,7 @@
 
     <!--Logo abaixo-->
     <div class="logo">
-        <img src="image/header.jpeg" alt="Logo">
+        <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
 
     <div class="h1">
@@ -66,13 +66,14 @@
                         <div class="prod_border">
                             <form action="produtos" method="post">
                                 <button type="submit" class="env"><?php echo "<img src=$img class='img_prod'>"; ?></button>
-                                <a href="produtos"><?php echo "<p class='prod_txt'> $nome </p>";?></a>
+                                <p><?php echo "<p class='prod_txt'> $nome </p>";?></p>
                                 <input type="hidden" name="id" value="<?php echo $produto['codproduto'];?>">
                             </form>
 
                             <?php echo "<p class='prod_txt'>$preco</p>";?>
                             <form action="carrinho" method="post">
                                 <input type="hidden" name="id" value="<?php echo $produto['codproduto'];?>">
+                                <input type="hidden" name="add" value="carrinho">
                                 <button type="submit" class="btn">Adicionar ao carrinho</button>
                             </form>
                         </div>

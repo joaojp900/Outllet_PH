@@ -18,7 +18,7 @@
 
     <!--Logo abaixo-->
     <div class="logo">
-        <img src="image/header.jpeg" alt="Logo">
+        <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
 
 

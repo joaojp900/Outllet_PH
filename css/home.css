@@ -213,3 +213,15 @@ p{
     height: 300px;
 }
 
+.img_prod:hover{
+    cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+}
+
+.img_logo{
+    width: 599px;
+    height: 300px;
+}

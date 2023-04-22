@@ -8,6 +8,10 @@ body{
     background-color: white;
 }
 
+a{
+    text-decoration: none;
+}
+
 ul li{
     list-style: none;
 }
@@ -67,9 +71,6 @@ body > header > ol > li:nth-child(1) > a > h2{
 
 }
 
-body > header > ol > li:nth-child(1) > a{
-    text-decoration: none;
-}
 
 body > h1{
     text-shadow: 4px 4px 4px rgb(70, 69, 69);
@@ -104,7 +105,7 @@ button{
 button:hover{
     background-color: white;
     color: black;
-    text-shadow: 2px 2px 2px rgb(70, 69, 69);
+    text-shadow: 2px 2px 2px black;
 }
 
 input{ 

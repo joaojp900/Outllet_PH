@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `outllet`
 --
+CREATE DATABASE outllet;
 
 -- --------------------------------------------------------
 

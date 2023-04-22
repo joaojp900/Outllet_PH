@@ -15,11 +15,17 @@
     </header>
 
     <div class="logo">
-        <img src="image/header.jpeg" alt="Logo">
+        <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
     <?php
         $teste = $_POST['id'];
-        echo($teste);
+        $teste1 = $_POST['tamanho_tenis'];
+        $teste2 = $_POST['txt_quant'];
+        echo('id: '.$teste);
+        echo(' tamanho_tenis: '.$teste1);
+        echo(' Quantidade: '.$teste2)
+        
+        
     ?>
         <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">
