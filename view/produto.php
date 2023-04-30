@@ -26,23 +26,20 @@
         $fun = new ServicoController;
         $fun->info_prod($id);
         $produto = $_SESSION['pega_descri'];
+        $img = 'img/'.$produto[0]["imagem"];
     ?>
+
+    <section>
+        <ul>
+            <li><?php echo "<img src=$img class='img_prod'>"; ?></li>            
+        </ul>
+    </section>
 
     <div>
         <form action="carrinho" method="post">
             <ol class="info">
                 <li><h3><?php echo($produto[0]['nome'])?></h3></li>
                 <li><h2><?php echo('R$: '.$produto[0]['preco'].',00') ?></h2></li>
-                <li>
-                    <p>Selecione uma opção</p>
-                </li>
-                <li><label for="">Tamanho</label></li>
-                <li>
-                    <select name="tamanho_tenis" class="tamanho_tenis">
-                    <option disabled selected>Selecione...</option>
-                    <option value="39">39</option>
-                    </select>
-                </li>
                 <li>
                     <div class="quantidade">
                         <input type="button" name="menos" value="+" class="btn_quantidade" id="mais">

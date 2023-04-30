@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 22, 2023 at 11:21 PM
+-- Generation Time: Apr 22, 2023 at 11:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 -- Database: `outllet`
 --
 
-CREATE Database outllet;
-
 -- --------------------------------------------------------
 
 --
@@ -31,17 +29,9 @@ CREATE Database outllet;
 
 CREATE TABLE `imagens` (
   `id` int(11) NOT NULL,
-  `imagem` varchar(250) NOT NULL
+  `imagem` varchar(250) NOT NULL,
+  `nome` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `imagens`
---
-
-INSERT INTO `imagens` (`id`, `imagem`) VALUES
-(1, 'Foto_Perfil.png'),
-(2, 'Fundo-linkedin.jpeg'),
-(3, 'GitHub-logo.png');
 
 -- --------------------------------------------------------
 
@@ -89,12 +79,6 @@ INSERT INTO `usuario` (`id`, `nome`, `senha`) VALUES
 --
 
 --
--- Indexes for table `imagens`
---
-ALTER TABLE `imagens`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
@@ -109,12 +93,6 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `imagens`
---
-ALTER TABLE `imagens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `produtos`

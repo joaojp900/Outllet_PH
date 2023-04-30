@@ -18,14 +18,30 @@
         <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
     <?php
-        $teste = $_POST['id'];
-        $teste1 = $_POST['tamanho_tenis'];
-        $teste2 = $_POST['txt_quant'];
-        echo('id: '.$teste);
-        echo(' tamanho_tenis: '.$teste1);
-        echo(' Quantidade: '.$teste2)
-        
-        
+        /*
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
+            $id = $_POST['id'];
+            $quant = $_POST['txt_quant'];
+            echo('id: '.$id);
+            echo(' Quantidade: '.$quant);
+        }else{
+            echo("O carrinho está vazio!");
+        }*/
+
+        if(isset($_POST['id']) && isset($_POST['txt_quant'])){
+            $id = $_POST['id'];
+            $quant = $_POST['txt_quant'];
+            echo('id: '.$id);
+            echo(' Quantidade: '.$quant);
+        }elseif(isset($_POST['id'])){
+            $id = $_POST['id'];
+            echo('id: '.$id);
+        }elseif(isset($_POST['txt_quant'])){
+            $quant = $_POST['txt_quant'];
+            echo(' Quantidade: '.$quant);
+        }else{
+            echo('O carrinho está vazio!');
+        }
     ?>
         <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">
