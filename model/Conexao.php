@@ -7,7 +7,7 @@
             $port = "3306";//porta
             $dbname= "outllet"; //nome do banco de dados
             $user = "root"; //usuário do BD
-            $pwd = "root"; //senha do BD
+            $pwd = ""; //senha do BD
     
             //enviar as informações para acesso do servidor de BD
             $con = new PDO("mysql:host=$host;

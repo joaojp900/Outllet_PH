@@ -38,11 +38,12 @@
                 // Tenta mover o arquivo enviado para a pasta de destino
                 if (move_uploaded_file($uploadedFiles['tmp_name'][0], $targetFilePath)) {
                     $cad->imagem = $fileName;
-                    //$cad->cadastrar();
-                    /*echo "<script>
+                    $cad->cadastrar();
+                    echo "<script>
+
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';
-                        </script>";*/
+                        </script>";
                 } else {
                     echo "<script>
                     alert('Erro ao enviar os arquivos!');
@@ -57,11 +58,11 @@
                if (move_uploaded_file($uploadedFiles['tmp_name'][$i], $targetFilePath)) {
                     $cad->imagem = $fileName;
                     //colocar na tabela nova
-                    //$cad->cadastrar2();
-                    /*echo "<script>
+                    $cad->cods($cad);
+                    echo "<script>
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';
-                        </script>";*/
+                        </script>";
                 } else {
                     echo "<script>
                     alert('Erro ao enviar os arquivos!');
