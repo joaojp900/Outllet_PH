@@ -45,35 +45,45 @@
         public function cadastrar(){
             $con = Conexao::conectar(); //conectar no BD
             //comando SQL para cadastrar (INSERT)
-            $cmd = $con->prepare("INSERT INTO produtos (nome, preco, descricao, imagem) 
-            VALUES (:nome, :preco, :descricao,:imagem)");
+            $cmd = $con->prepare("INSERT INTO produtos (nome, preco, descricao, imagem,codproduto) 
+            VALUES (:nome, :preco, :descricao,:imagem,:codproduto )");
 
             //enviando o valor dos parâmetros
             $cmd->bindParam(":nome",          $this->nome);
             $cmd->bindParam(":preco",            $this->preco);
             $cmd->bindParam(":descricao",    $this->descricao);
             $cmd->bindParam(":imagem",          $this->imagem);
+            $cmd->bindParam(":codproduto", $this->codproduto);
+            
             $cmd->execute(); //executar o comando
+            //pega ultimo codproduto cadastrado no banco
+            $this->codproduto = $con->lastInsertId();
         }
-
-        public function cods($cad){
-                $con = Conexao::conectar();
-             $codproduto = $cmd = $con->prepare("SELECT codproduto FROM produtos" );
-             $cmd->execute();
-             $cad->cadastrar2();
-        }
+             
+         
 
         //outra função para cadastrar as outras fotos no banco
         public function cadastrar2(){
             $con = Conexao::conectar(); //conectar no BD
             //comando SQL para cadastrar (INSERT)
-            $cmd = $con->prepare("INSERT INTO imagens (imagem,codproduto) VALUE (:imagem,:codproduto) ");
+            $cmd = $con->prepare("INSERT INTO imagens (imagem,codproduto) VALUE (:imagem, :codproduto) ");
 
             //enviando o valor dos parâmetros
             $cmd->bindParam(":imagem",          $this->imagem);
             $cmd->bindParam(":codproduto",          $this->codproduto);
             $cmd->execute(); //executar o comando
         }
+
+        public function jp(){
+            $con = Conexao::conectar();
+            $cmd = $con->prepare("SELECT * FROM imagens JOIN produtos 
+             ON produto.codproduto = imagens.codproduto 
+             WHERE produto.codproduto = :codproduto");
+             $cmd->bindParam(":codproduto", $this->codproduto);
+             $cmd->execute();
+             return $cmd->fetchAll(PDO::FETCH_OBJ);
+
+          }
              
 
 
@@ -88,11 +98,13 @@
         }
 
         //seleciona produto que aparece na descrição do produto
-        public function info_prod($id){
+        public function info_prod(){
             $con = Conexao::conectar();
-            $query = 'SELECT * from produtos WHERE codproduto = :id';
+            $query = "SELECT * FROM produtos JOIN imagens
+            ON produtos.codproduto = imagens.codproduto 
+            WHERE produtos.codproduto = :codproduto";
             $cmd = $con->prepare($query);
-            $cmd->bindParam(":id", $id);
+            $cmd->bindParam(":codproduto", $this->codproduto );
             $cmd->execute();
             $result = $cmd->fetchAll(PDO::FETCH_ASSOC);
             $_SESSION['pega_descri'] = $result;

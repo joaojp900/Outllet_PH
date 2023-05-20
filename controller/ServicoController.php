@@ -58,8 +58,9 @@
                if (move_uploaded_file($uploadedFiles['tmp_name'][$i], $targetFilePath)) {
                     $cad->imagem = $fileName;
                     //colocar na tabela nova
-                    $cad->cods($cad);
-                    echo "<script>
+                   $cad->cadastrar2() ;
+                   $cad->jp();
+                   echo "<script>
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';
                         </script>";

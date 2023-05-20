@@ -27,6 +27,7 @@
         $fun->info_prod($id);
         $produto = $_SESSION['pega_descri'];
         $img = 'img/'.$produto[0]["imagem"];
+        
     ?>
 
     <section>
