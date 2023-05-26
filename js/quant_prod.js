@@ -7,7 +7,7 @@ function mais_prod(){
 }
 
 function menos_prod(){
-    if(parseInt(txt_quant.value)>1){
+    if(parseInt(txt_quant.value)>0){
         txt_quant.value = parseInt(txt_quant.value)-1
     }
 }

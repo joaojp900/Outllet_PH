@@ -15,20 +15,10 @@ img{
 
 header{
     background-color: black;
-    color: white;
-    display: flex;
-    padding: 1%;
+    margin-top: -20px;
+    margin-bottom: -40px;
 }
 
-
-/*Tira estilo da lista*/
-ul{
-    list-style: none;
-}
-
-ol{
-    list-style: none;
-}
 
 /*Estilo da logo*/
 .logo{
@@ -41,6 +31,14 @@ ol{
     border: 0px;
     border-top: 1px solid #303030;
 }
+
+/*Coloca cor no texto no cabeçalho*/
+body > header > ol > li:nth-child(1) > h2{
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
 
 /*Grid de produtos*/
 .grid1{
@@ -90,11 +88,6 @@ ol{
     text-shadow: 4px 4px 4px rgb(70, 69, 69);
 }
 
-figure{
-    color: white;
-    text-decoration: none;
-}
-
 /*Borda dos produtos*/
 .prod_border{
     border: 1px solid #CCC;
@@ -113,11 +106,15 @@ figure{
     margin-right: 20px;
 }
 
+/*Tira estilo da lista*/
+ul li{
+    list-style: none;
+}
+
 .categoria_h2{
     margin-left: 10px;
 }
 
-/* Categorias alinhamento*/
 body > ol > li{
     display: inline-block;
 }
@@ -130,6 +127,7 @@ body > ol > li:nth-child(2) > p{
 .check_cate{
     margin-left: 20px;
 }
+
 
 .env{
     background-color: none;
@@ -192,20 +190,20 @@ p{
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 30px;
+    margin-right: 20px;
     margin-top: 20px;
+    list-style: none;
 }
 
 .icon_login{
     background-color: white;
-    color: white;
     width: 40px;
     height: 40px;
     border-radius: 5px;
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 90px;
+    margin-right: 80px;
     margin-top: 20px;
 }
 

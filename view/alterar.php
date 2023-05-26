@@ -21,7 +21,6 @@
             <li><a href=""><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
             <li><a href="<?php $login=false;?>login"><img src="image/sair.png" alt="sair" class="icon_sair"></a></li>
             <li><a href="<?php echo URL?>consulta-produto"><img src="image/sair.png" alt=""></a></li>
-            <li><a href="<?php echo URL?>alterar"><img src="image/sair.png" alt=""></a></li>
         </ol>
     </header>
 
@@ -29,18 +28,33 @@
     <div class="logo">
         <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
+                  <?php
+                  
+                  $fun = new servico();
+                  $fun->consultar();
+                  $result  = $_SESSION['pegas'];
+                  
+                  foreach($result as $value){
 
+                  
+                  ?>
+            
     <h1 class="center">Cadastro de novos produtos.</h1>
-    <form action="enviar" method="post" enctype="multipart/form-data">
+    <form action="<?php echo URL;?>atualizar-produtos" method="post" enctype="multipart/form-data">
         <div class="center">
             <ul>
-                <li><input type="text" name="nome" placeholder="Nome do produto"></li>
+            <input type="text" name="codusuario" id="codusuario" class="form-control" value="<?php echo $value->codproduto?> " readonly required>
                 <br>
-                <li><input type="text" name="preco" placeholder="Preço"></li>
                 <br>
-                <li><textarea name="descricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea></li>
+                <li><input type="text" name="nome" placeholder="Nome " value=" <?php echo $value->nome ?>" required ></li>
                 <br>
-                <li><input type="file" name="image[]" accept="image/*" multiple require></li>
+                <li><input type="text" name="preco" placeholder="Preço" value="<?php echo $value->preco ?>"  required></li>
+                <br>
+                <li><textarea name="descricao" cols="30" rows="10" placeholder="Descrição do produto" value="<?php echo $value->descricao ?>" required></textarea></li>
+                <br>
+               <?php
+               }
+               ?>
             </ul>
         </div>
         <div class="btn_center">

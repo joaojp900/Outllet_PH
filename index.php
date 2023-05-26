@@ -55,10 +55,33 @@ if(isset($_GET['url']))
             $usu->cadastrar();
         break;
 
-        case 'limpaCarrinho':
+        case 'atualizar-perfil':
             $usu = new ServicoController();
-            $usu->limpaCarrinho();
-        break;
+            $usu->atualizar();
+            break;
+            
+         case 'consulta-produto':
+            $usu = new ServicoController();
+            $usu->abrirConsulta();
+            break;
+        
+        case 'excluir-noticia':
+            $usu = new ServicoController();
+            $usu->excluir($url[1]);
+            break;
+            
+            case'alterar':
+                $usu = new abrir();
+                $usu->atualizarprod();
+                break;
+                
+             case 'atualizar-produtos':
+                   $usu = new ServicoController();
+                   $usu->atualizado();
+                   break;
+
+
+             
 
         default:
             echo "página não encontrada<br>

@@ -13,25 +13,11 @@
     <!--cabeçalho da página-->
     <header>
         <ol>
-            <li>
-                <h2 class="ph_txt">OUTLLET PH</h2>
-            </li>
-            <li>
-                <a href="carrinho">
-                    <figure class="icon_carrinho">
-                        <img src="image/carrinho-de-compras.png" alt="Carrinho">
-                        <figcaption>Carrinho</figcaption>
-                    </figure>
-                </a>
-            </li>
+            <li><h2>OUTLLET PH</h2></li>
+            <li><a href="carrinho"><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
         </ol>
         <div class="icon_login">
-            <a href="login">
-                <figure>
-                    <img src="image/login.png" alt="login">
-                    <figcaption>Login</figcaption>
-                </figure>
-            </a>
+            <a href="login"><img src="image/login.png" alt="login"></a>
         </div>
     </header>
 
@@ -72,26 +58,6 @@
                 $fun = new ServicoController;
                 $fun->inicio();
                 $produtos = $_SESSION['pega_produt'];
-                // Verifica se um produto foi adicionado ao carrinho
-                if(isset($_POST['id']) && isset($_POST['nome']) && isset($_POST['preco'])) {
-                    // Adiciona o produto ao carrinho
-                    $id = $_POST['id'];
-                    $nome = $_POST['nome'];
-                    $preco = $_POST['preco'];
-                    if(isset($_SESSION['carrinho'][$id])) {
-                        $_SESSION['carrinho'][$id]['quantidade']++;
-                        header("location: carrinho");
-                    } else {
-                        $_SESSION['carrinho'][$id] = array(
-                            "codproduto" => $id,
-                            "quantidade" => 1,
-                            "preco" => $preco,
-                            "nome" => $nome,
-                        );
-                        header("location: carrinho");
-                    }
-                }
-
                 foreach ($produtos as $produto) {
                     $img = 'img/'.$produto['imagem'];
                     $nome = $produto['nome'];
@@ -105,10 +71,9 @@
                             </form>
 
                             <?php echo "<p class='prod_txt'>$preco</p>";?>
-                            <form  method="post">
+                            <form action="carrinho" method="post">
                                 <input type="hidden" name="id" value="<?php echo $produto['codproduto'];?>">
-                                <input type="hidden" name="nome" value="<?php echo $produto['nome'];?>">
-                                <input type="hidden" name="preco" value="<?php echo $produto['preco'];?>">
+                                <input type="hidden" name="add" value="carrinho">
                                 <button type="submit" class="btn">Adicionar ao carrinho</button>
                             </form>
                         </div>

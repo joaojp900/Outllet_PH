@@ -10,11 +10,8 @@ body{
 
 header{
     background-color: black;
-    display: flex;
-}
-
-li{
-    list-style: none;
+    margin-top: -20px;
+    margin-bottom: -60px;
 }
 
 .logo{
@@ -37,26 +34,21 @@ li{
     border-radius: 5px;
 }
 
-.conteudo{
-    display: flex;
-}
-
 /*Alinha o icone carrinho lado superior direito*/
-.pos_carrinho{
+body > header > ol > li:nth-child(2) > a > img{
     position: absolute;
     top: 0;
     right: 0;
     margin-right: 20px;
     margin-top: 20px;
     list-style: none;
-    color: white;
-    text-decoration: none;
-    font-size: medium;
 }
 
 /*Alinha e coloca cor no texto Outtlet PH*/
-.ph_txt{
+body > header > ol > li:nth-child(1) > a > h2{
     color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 /*Alinha nome, preço e botão*/
@@ -69,7 +61,9 @@ li{
 }
 
 .descricao{
-    margin-left: 2%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50px;
 }
 
 /*Cor do texto nome do produto*/
@@ -94,11 +88,6 @@ button:hover{
     background-color: white;
     color: black;
     text-shadow: 2px 2px 2px rgb(80, 79, 79);
-}
-
-.img_prod{
-    width: 10%;
-    height: 10%;
 }
 
 /*Espaçamento e borda nos icones flutuantes*/
