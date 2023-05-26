@@ -59,7 +59,6 @@
                     $cad->imagem = $fileName;
                     //colocar na tabela nova
                    $cad->cadastrar2() ;
-                   $cad->jp();
                    echo "<script>
                         alert('Dados gravados com sucesso!');
                         window.location='".URL."home';
@@ -84,5 +83,11 @@
             $fun = new servico;
             $fun->info_prod($id);
         }
+
+        public function limpaCarrinho(){
+            session_destroy();
+            header("location: carrinho");
+        }
+        
     }
 ?>

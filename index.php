@@ -55,6 +55,11 @@ if(isset($_GET['url']))
             $usu->cadastrar();
         break;
 
+        case 'limpaCarrinho':
+            $usu = new ServicoController();
+            $usu->limpaCarrinho();
+        break;
+
         default:
             echo "página não encontrada<br>
             Verificar se existe a rota criada<br>
