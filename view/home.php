@@ -55,6 +55,7 @@
 
     <section class="grid1">
         <?php
+        //grid
                 $fun = new ServicoController;
                 $fun->inicio();
                 $produtos = $_SESSION['pega_produt'];
