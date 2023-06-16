@@ -10,8 +10,15 @@ body{
 
 header{
     background-color: black;
-    margin-top: -20px;
-    margin-bottom: -60px;
+    padding: 0.1%;
+}
+
+ol{
+    list-style: none;
+}
+
+ul{
+    list-style: none;
 }
 
 /*Alinha e coloca cor no texto Outtlet PH*/
@@ -23,7 +30,7 @@ body > header > ol > li:nth-child(1) > a > h2{
 }
 
 /*Tira estilo do link*/
-body > header > ol > li:nth-child(1) > a{
+a{
     text-decoration: none;
 }
 
@@ -51,14 +58,20 @@ body > form > div.center > ol > li:nth-child(1) > h1{
     border-radius: 5px;
 }
 
+
 /*Alinha o icone carrinho lado superior direito*/
-body > header > ol > li:nth-child(2) > a > img{
+.pos_carrinho{
     position: absolute;
     top: 0;
     right: 0;
     margin-right: 20px;
     margin-top: 20px;
     list-style: none;
+}
+
+figure{
+    color: white;
+    font-size: medium;
 }
 
 /*Alinha e coloca cor no texto Outtlet PH*/

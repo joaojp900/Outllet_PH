@@ -18,10 +18,30 @@
     <header>
         <ol>
             <li><a href="<?php ?>home"><h2>OUTLLET PH</h2></a></li>
-            <li><a href=""><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
-            <li><a href="<?php $login=false;?>login"><img src="image/sair.png" alt="sair" class="icon_sair"></a></li>
-            <li><a href="<?php echo URL?>consulta-produto"><img src="image/sair.png" alt=""></a></li>
-            <li><a href="<?php echo URL?>alterar"><img src="image/sair.png" alt=""></a></li>
+            <li>
+                <a href="<?php $login=false;?>login">
+                    <figure class="icon_sair">
+                        <img src="image/sair.png" alt="sair" class="img_icon">
+                        <Figcaption>Sair</Figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="consulta-produto">
+                    <figure class="icon_excluir">
+                        <img src="image/lixeira.png" alt="sair" class="img_icon">
+                        <figcaption>Exlcuir</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="alterar">
+                    <figure class="icon_alterar">
+                        <img src="image/editar.png" alt="sair" class="img_icon">
+                        <figcaption>Alterar</figcaption>
+                    </figure>
+                </a>
+            </li>
         </ol>
     </header>
 

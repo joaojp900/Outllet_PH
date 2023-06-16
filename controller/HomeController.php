@@ -25,11 +25,9 @@
         public function form_whats(){
             include_once 'view/form_whats.php';
         }
-        public function consulta(){
-            include_once 'view/consulta.php';
-        }
-        public function atualizarprod(){
-            include_once 'view/alterar.php';;
+
+        public function alterar(){
+            include_once 'view/alterar.php';
         }
 
     }

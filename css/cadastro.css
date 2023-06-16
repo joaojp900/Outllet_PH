@@ -35,11 +35,12 @@ header{
 }
 
 /*estilo icone do carrinho*/
-.icon_carrinho{
+.icon_sair{
     background-color: white;
     width: 40px;
     height: 40px;
     border-radius: 5px;
+    padding: 5px;
     position: absolute;
     top: 0;
     right: 0;
@@ -48,20 +49,49 @@ header{
     list-style: none;
 }
 
+.img_icon{
+    width: 40px; 
+    height: 40px;
+}
+
+figure{
+    text-align: center;
+}
+
+figcaption{
+    padding-top: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+}
+
 /*estilo icone do sair*/
-.icon_sair{
+.icon_excluir{
     background-color: white;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
     padding: 5px;
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 80px;
+    margin-right: 90px;
     margin-top: 20px;
-    list-style: none;
 }
+
+.icon_alterar{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 160px;
+    margin-top: 20px;
+}
+
 
 /*Alinha e coloca cor no texto Outtlet PH*/
 body > header > ol > li:nth-child(1) > a > h2{

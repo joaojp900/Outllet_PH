@@ -11,8 +11,17 @@
     <!--cabeçalho da página-->
     <header>
         <ol>
-            <li><a href="<?php ?>home"><h2>Outllet PH</h2></a></li>
-            <li><a href=""><img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho"></a></li>
+            <li><a href="home">
+                    <h2 class="ph_txt">OUTLLET PH</h2>
+                </a></li>
+            <li>
+                <a href="carrinho">
+                    <figure class="pos_carrinho">
+                        <img src="image/carrinho-de-compras.png" alt="Carrinho" class="icon_carrinho">
+                        <figcaption>Carrinho</figcaption>
+                    </figure>
+                </a>
+            </li>
         </ol>
     </header>
 
@@ -21,26 +30,25 @@
         <img src="image/header.jpg" alt="Logo" style="width: 599px; height: 300px;">
     </div>
 
-
-    <form action="" method="post">
         <div class="center">
             <ol>
                 <li><h1>Preencha os campos para finalizar a compra:</h1></li>
                 <br>
-                <li><input type="text" name="nome" id="" placeholder="Digite seu nome" required></li>
+                <li><input type="text" name="nome" id="nome" placeholder="Digite seu nome" required></li>
                 <br>
-                <li><input type="text" name="endereco" id="" placeholder="Digite seu endereço" required></li>
+                <li><input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required></li>
                 <br>
-                <li><input type="text" name="CPF" id="" placeholder="Digite seu CPF" required></li>
+                <li><input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone" required></li>
                 <br>
-                <li><input type="text" name="num_tenis" id="" placeholder="Digite seu numero do tenis" required></li>
-                <br>
+                <li><input type="text" name="CPF" id="CPF" placeholder="Digite seu CPF" required></li>
             </ol>
         </div>
         <div class="btn_center">
-            <button type="submit">Enviar</button>
+            <button type="submit" id="btn_enviar">Enviar</button>
         </div>
-    </form>
+   
+
+    <script src="/Outllet_PH/js/whatsapp.js"></script>
 
     <!--Icones whatsapp e instagram-->
 	<div class="whatsapp">

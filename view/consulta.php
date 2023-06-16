@@ -12,17 +12,26 @@
     <!-- CSS DataTables -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="shortcut icon" href="images/p.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/consulta.css">
 
 
     <title> Excluir produtos</title>
 </head>
 <body id="diversos">
  
+    <div class="voltarDiv">
+        <a href="cadastrar">
+            <figure>
+                <img src="image/voltar.png" alt="Voltar" class="voltar">
+                <figcaption>Voltar</figcaption>
+            </figure>
+        </a>
+    </div>
 
     <div class="container">
             <div class="col-sm-12 rounded ">
                 <a href="javascript:history.back()" type="button" style="margin-left: 75em;" class="btn-close btn-close-white" aria-label="Close" ></a>
-                <h3 >Exlcuir Produtos</h4>
+                <h3 >Excluir Produtos</h4>
                     <table id="tabela">
                         <thead>
                             <tr>
