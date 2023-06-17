@@ -5,7 +5,7 @@ include_once 'controller/ServicoController.php';
 include_once 'model/servico.php';
 
 //minha url
-define('URL','http://localhost/Outllet_PH/');
+define('URL','http://localhost/Outllet_PH2/');
 
 if(isset($_GET['url']))
 {
@@ -69,6 +69,21 @@ if(isset($_GET['url']))
             $usu = new abrir();
             $usu->alterar();
         break;
+
+        case 'excluir-noticia':
+            $usu = new ServicoController();
+            $usu->excluir($url[1]);
+            break;
+            
+            case'alterar':
+                $usu = new abrir();
+                $usu->atualizarprod();
+                break;
+                
+             case 'atualizar-produtos':
+                   $usu = new ServicoController();
+                   $usu->atualizado();
+                   break;
 
         default:
             echo "página não encontrada<br>

@@ -101,4 +101,43 @@ class ServicoController
         $dadosnoticia = $usu->consultar();
         include_once 'view/consulta.php';
     }
+
+    public function atualizado()
+    {
+
+    $usu = new servico();
+    $usu->codproduto = $_POST["codproduto"];
+    $usu->nome  = $_POST["nome"];
+    $usu->preco  = $_POST["preco"];
+    $usu->descricao = $_POST["descricao"];
+    $usu->atualizado();
+
+    echo "<script>
+        alert('Dados atualizados com sucesso!');
+        window.location='".URL."home';
+       </script>";
+
+
+   }
+
+
+
+
+
+
+   public function excluir($cod)
+    {
+    $not = new servico();
+    $not->codproduto = $cod;
+    //excluir arquivo
+    $results = $not->retornar();
+    if(is_file("img/$results->imagem")) unlink("img/$results->imagem");
+    $not->excluir();
+    header("Location:".URL."consulta-produto");
+    }
+
+
+
+
+
 }

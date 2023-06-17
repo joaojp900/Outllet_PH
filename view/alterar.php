@@ -56,7 +56,7 @@
     <form action="<?php echo URL;?>atualizar-produtos" method="post" enctype="multipart/form-data">
         <div class="center">
             <ul>
-            <input type="text" name="codusuario" id="codusuario" class="form-control" value="<?php echo $value->codproduto?> " readonly required>
+            <input type="text" name="codproduto" id="codproduto" class="form-control" value="<?php echo $value->codproduto?> " readonly required>
                 <br>
                 <br>
                 <li><input type="text" name="nome" placeholder="Nome " value=" <?php echo $value->nome ?>" required ></li>

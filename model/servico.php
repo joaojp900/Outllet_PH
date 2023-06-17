@@ -123,4 +123,50 @@ class servico
         $results =  $cmd->fetchAll(PDO::FETCH_OBJ);
         $_SESSION['pegas'] = $results;
     }
+
+     //CRUD PH
+
+     public function atualizado(){
+            
+        $con = Conexao::conectar();
+        
+
+        $cmd = $con->prepare("UPDATE produtos SET 
+         nome = :nome,
+         preco = :preco,
+         descricao = :descricao
+         WHERE codproduto = :codproduto");
+         //enviando o valor dos parametros
+         $cmd->bindParam(":codproduto", $this->codproduto);
+         $cmd->bindParam(":nome", $this->nome);
+         $cmd->bindParam(":preco", $this->preco);
+         $cmd->bindParam(":descricao", $this->descricao);
+         $cmd->execute();
+          var_dump($cmd);
+     }
+
+
+     public function excluir(){
+        $con = Conexao::conectar();
+
+        $cmd = $con->prepare("DELETE FROM produtos 
+        WHERE codproduto = :codproduto");
+        //enviar valores
+        $cmd->bindParam(":codproduto", $this->codproduto);
+        $cmd->execute();
+        $result = $cmd->fetchAll(PDO::FETCH_ASSOC);
+         
+        
+     }
+
+     public function retornar()
+     {
+         $con = Conexao::conectar();//acessar o BD
+         $cmd = $con->prepare("SELECT * FROM produtos
+         WHERE codproduto = :codproduto"); //comando SQL
+         $cmd->bindParam(":codproduto", $this->codproduto);
+         $cmd->execute();//executar o comando SQL
+        
+         
+     }
 }

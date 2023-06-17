@@ -60,11 +60,9 @@
                                     <td>$value->descricao</td>
                                     <td><img src='img/$value->imagem' class='img-thumbnail' width='100px'></td>
                                     <td>
-                                    <a href='". URL ."excluir-noticia/$value->codproduto' onclick='return confirm(\"Tem certeza?\")' class='btn btn-outline-light btn-sm'><i class='fa fa-trash'></i> Excluir</a>
+                                    <a href='". URL ."excluir-noticia/$value->codproduto' onclick='return confirm(\"Tem certeza?\")' class='btn  btn-sm'><i class='fa fa-trash'></i> Excluir</a>
                                     </td>
-                                    <td>
-                                    <a href='". URL ."alterar/$value->codproduto' onclick='return confirm(\"Tem certeza?\")' class='btn btn-outline-light btn-sm'><i class='fa fa-trash'></i> Excluir</a>
-                                    </td>
+                                    
                                 </tr>";
                             }
                             ?>
